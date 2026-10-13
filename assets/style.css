@@ -47,5 +47,10 @@ h2{font-family:'El Messiri',serif;color:var(--deep);font-size:24px;margin:28px 0
 .nav a{text-decoration:none;color:var(--plum)}
 .nav .tile{min-height:92px;display:flex;flex-direction:column;align-items:center;justify-content:center}
 footer{text-align:center;margin-top:34px;font-size:13px;color:#6B3A50}
+.org{display:flex;align-items:center;justify-content:center;gap:12px;margin:0 auto 10px;text-align:right}
+.org .bar{width:2px;align-self:stretch;background:linear-gradient(180deg,rgba(232,97,140,0),#E8618C,rgba(232,97,140,0))}
+.org b{display:block;font-size:14.5px;color:var(--plum)}.org span{display:block;font-size:13.5px;color:var(--deep);font-weight:500}
+.org em{display:block;font-style:normal;direction:ltr;text-align:right;font-size:11px;color:var(--rose);letter-spacing:.02em}
+.mmart{width:170px;height:170px;margin:-8px auto 6px;border-radius:50%;padding:14px;background:radial-gradient(circle at 40% 35%,#FFE3EC 0%,#F9C3D3 70%,#F48FB1 100%);box-shadow:0 12px 26px rgba(180,42,92,.18)}
 footer img{height:64px;display:block;margin:0 auto 6px}
 .src{font-size:12.5px;color:#6B3A50;margin-top:16px}
