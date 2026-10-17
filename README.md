@@ -1,5 +1,28 @@
-# وعيُكِ حياة — Pink October
+# وعيُكِ حياة · Pink October
 
-Breast Cancer Awareness Day landing pages (Arabic, RTL) — Faculty of Applied Health Sciences Technology, Department of Radiology & Medical Imaging Technology. Each QR code on the printed materials opens one of these pages.
+حملة التوعية بسرطان الثدي — كلية تكنولوجيا العلوم الصحية التطبيقية، قسم تكنولوجيا الأشعة والتصوير الطبي.
 
-Published with GitHub Pages: https://asmaa-ib.github.io/Pink-October/
+الموقع: https://asmaa-ib.github.io/Pink-October/
+
+## هيكل المشروع
+
+```
+index.html              الصفحة الرئيسية
+awareness.html …        صفحات التوعية (تفتحها رموز QR في التصاميم المطبوعة)
+mammo.html              الماموغرام: الجهاز، صورة الأشعة، خطوات الفحص
+designs.html            معرض التصاميم العشرة (PDF)
+designs/                ملفات PDF للطباعة
+wheel/                  عجلة الوعي التفاعلية (index.html + wheel.css)
+assets/
+  style.css             تنسيق كل الصفحات
+  logo.png              شعار الكلية
+  fonts/                الخطوط (مستضافة محلياً)
+  img/
+    mammography/        جهاز الماموغرام وصورة الأشعة
+    self-exam/          خطوات الفحص الذاتي
+    anatomy/            أنسجة الثدي والعلامات الظاهرة
+    campaign/           الشريط الوردي وصور الحملة
+    designs/            صور معاينة التصاميم
+```
+
+النشر: GitHub Pages من الفرع `main` والمجلد الجذري. أي تعديل يُرفع إلى `main` يظهر على الموقع خلال دقائق.
