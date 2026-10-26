@@ -46,6 +46,7 @@ h2{font-family:'El Messiri',serif;color:var(--deep);font-size:24px;margin:28px 0
 .nav{margin-top:30px}
 .nav a{text-decoration:none;color:var(--plum)}
 .nav .tile{min-height:92px;display:flex;flex-direction:column;align-items:center;justify-content:center}
+.nav a:last-child:nth-child(odd){grid-column:1/-1}
 footer{text-align:center;margin-top:34px;font-size:13px;color:#6B3A50}
 .org{display:flex;align-items:center;justify-content:center;gap:12px;margin:0 auto 10px;text-align:right}
 .org .bar{width:2px;align-self:stretch;background:linear-gradient(180deg,rgba(232,97,140,0),#E8618C,rgba(232,97,140,0))}

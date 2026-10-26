@@ -10,6 +10,7 @@
 index.html              الصفحة الرئيسية
 awareness.html …        صفحات التوعية (تفتحها رموز QR في التصاميم المطبوعة)
 mammo.html              الماموغرام: الجهاز، صورة الأشعة، خطوات الفحص
+radiology.html          قسم الأشعة: أجهزة التصوير، دور الأخصائي، الأمان الإشعاعي (radiology.css)
 wheel/                  عجلة الوعي التفاعلية (index.html + wheel.css)
 assets/
   style.css             تنسيق كل الصفحات

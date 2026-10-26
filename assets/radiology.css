@@ -1,0 +1,124 @@
+/* قسم الأشعة — هوية مستقلة مستوحاة من بطاقة اليوم العالمي للتصوير الإشعاعي:
+   ورق رمادي، أفلام أشعة سوداء، طوابع وختم بريدي. الوردي للماموغرام فقط. */
+.rx{--paper:#E9E8E4;--card:#F5F4F1;--sheet:#FFFFFF;--ink:#1E1E1F;--muted:#55534F;--film:#161617;--film-ink:#ECECEA;--line:#3A3A3B;--pink:#B42A5C;--ease:cubic-bezier(.23,1,.32,1);
+ background:var(--paper);color:var(--ink);line-height:1.8}
+.rx a{color:var(--pink)}
+.rx ::selection{background:var(--ink);color:var(--paper)}
+.rx :focus-visible{outline:3px solid var(--pink);outline-offset:3px;border-radius:6px}
+.rx-wrap{max-width:1080px;margin:0 auto;padding:0 16px}
+
+/* شريط علوي بسيط */
+.rx-bar{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 0}
+.rx-bar a{color:var(--ink);text-decoration:none;font-weight:600;font-size:15px;display:inline-flex;align-items:center;gap:6px;min-height:44px}
+.rx-bar a:hover{color:var(--pink)}
+.rx-bar span{font-size:14px;color:var(--muted)}
+
+/* البطاقة البريدية */
+.post{position:relative;background:var(--card);border:2px solid var(--line);outline:1px solid var(--line);outline-offset:-9px;border-radius:4px;padding:34px 22px 26px;overflow:hidden}
+.post-top{display:flex;justify-content:space-between;align-items:flex-start;gap:12px}
+.mark{display:flex;align-items:center;direction:ltr}
+.mark .waves{width:92px;height:44px}
+.mark .ring{width:66px;height:66px;margin-left:-6px;border:2.5px solid var(--line);border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;font:700 13px/1.25 'El Messiri',serif;color:var(--ink);transform:rotate(-8deg);text-align:center}
+.mark .ring small{font:500 10.5px 'IBM Plex Sans Arabic',sans-serif;color:var(--muted)}
+.stamps{display:flex;gap:10px;align-items:flex-start}
+.stamp{width:62px;height:76px;background:var(--sheet);padding:5px;display:block;
+ -webkit-mask:linear-gradient(#000 0 0) content-box,radial-gradient(circle 3.2px at 3.2px 3.2px,#0000 98%,#000) -3.2px -3.2px/9px 9px round padding-box;mask:linear-gradient(#000 0 0) content-box,radial-gradient(circle 3.2px at 3.2px 3.2px,#0000 98%,#000) -3.2px -3.2px/9px 9px round padding-box}
+.stamp svg{display:block;width:100%;height:100%;background:var(--film)}
+.stamp.a{transform:rotate(5deg)}.stamp.b{transform:rotate(-4deg);margin-top:10px}
+.post h1{font-family:'El Messiri',serif;color:var(--ink);font-size:clamp(36px,9vw,68px);line-height:1.2;margin:22px 0 0;letter-spacing:0}
+.post .sub{font-size:clamp(16px,2.6vw,19px);color:var(--muted);max-width:620px;margin:14px 0 0;font-weight:500}
+.post .sub b{color:var(--ink)}
+.parade{display:flex;justify-content:space-between;align-items:flex-end;gap:6px;margin:30px auto 0;max-width:640px}
+.parade svg{width:18%;max-width:96px;height:auto}
+
+/* العنوان الفرعي للأقسام */
+.rx h2{font-family:'El Messiri',serif;color:var(--ink);font-size:clamp(26px,5vw,38px);line-height:1.3;margin:56px 0 8px;display:block}
+.rx .intro{font-size:17px;color:var(--muted);max-width:640px;margin:0 0 22px}
+
+/* صندوق الإضاءة: اختر جهازاً لترى ما يراه */
+.lightbox{background:var(--film);color:var(--film-ink);border-radius:14px;padding:14px}
+.cast{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:6px;margin:0;padding:0;list-style:none}
+.cast button{width:100%;background:transparent;border:0;border-radius:10px;padding:8px 2px 6px;color:var(--film-ink);font:600 13px/1.4 'IBM Plex Sans Arabic',sans-serif;cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:4px;min-height:44px;
+ transition:background-color .2s var(--ease),transform .16s var(--ease)}
+.cast button svg{width:100%;max-width:64px;height:auto;background:var(--card);border-radius:8px;padding:4px;transition:transform .24s var(--ease)}
+.cast button[aria-selected=true]{background:#2B2B2D}
+.cast button[aria-selected=true] svg{transform:translateY(-3px)}
+.cast button[aria-selected=true] span{color:#fff}
+.cast button span{color:#B9B8B4}
+.cast button:active{transform:scale(.96)}
+@media (hover:hover) and (pointer:fine){.cast button:hover{background:#242426}.cast button:hover span{color:#fff}}
+.cast button:focus-visible{outline-color:#fff}
+
+.panel{display:grid;gap:16px;margin-top:14px;padding-top:14px;border-top:1px solid #2E2E30}
+.js .panel[hidden]{display:none}
+.js .panel{animation:rx-in .26s var(--ease)}
+@keyframes rx-in{from{opacity:0;transform:translateY(6px)}}
+.scan{margin:0;background:#000;border-radius:10px;padding:10px}
+.scan svg{display:block;width:100%;height:auto;aspect-ratio:1}
+.scan figcaption{font-size:13.5px;color:#B9B8B4;padding:8px 2px 0;line-height:1.6}
+.panel h3{font-family:'El Messiri',serif;font-size:28px;margin:0;color:#fff;line-height:1.35}
+.panel h3 i{font-style:normal;font-family:'IBM Plex Sans Arabic',sans-serif;font-size:15px;color:#B9B8B4;font-weight:500;display:block}
+.panel dl{margin:12px 0 0;display:grid;gap:12px}
+.panel dt{font-size:13.5px;color:#B9B8B4;font-weight:500}
+.panel dd{margin:0;font-size:16.5px;color:var(--film-ink)}
+.panel .tag{display:inline-block;padding:0 10px;border-radius:6px;font-size:14px;font-weight:600;margin-left:6px}
+.tag.no{background:#E9E8E4;color:var(--film)}.tag.low{background:#3A3A3C;color:#fff}
+.panel .more{display:inline-flex;align-items:center;gap:6px;margin-top:14px;color:#fff;background:var(--pink);text-decoration:none;font-weight:600;padding:10px 16px;border-radius:10px;min-height:44px;transition:transform .16s var(--ease)}
+.panel .more:active{transform:scale(.97)}
+
+/* الأخصائي والطبيب */
+.duo-rx{display:grid;gap:12px}
+.who{background:var(--card);border-radius:12px;padding:18px}
+.who b{font-family:'El Messiri',serif;font-size:21px;display:block}
+.who em{font-style:normal;direction:ltr;display:block;text-align:right;color:var(--muted);font-size:13px}
+.who p{margin:6px 0 0;font-size:16px}
+.journey{list-style:none;margin:20px 0 0;padding:0;display:grid;gap:2px;counter-reset:j}
+.journey li{background:var(--card);padding:14px 18px;display:grid;grid-template-columns:auto 1fr;gap:4px 14px;align-items:baseline}
+.journey li:first-child{border-radius:12px 12px 0 0}.journey li:last-child{border-radius:0 0 12px 12px}
+.journey li::before{counter-increment:j;content:counter(j,arabic-indic);grid-row:span 2;font:700 30px/1 'El Messiri',serif;color:var(--pink);min-width:28px}
+.journey b{font-size:17px}.journey p{margin:0;font-size:15.5px;color:var(--muted)}
+
+/* الأمان الإشعاعي */
+.safe{display:grid;gap:18px;align-items:center;background:var(--ink);color:var(--film-ink);border-radius:14px;padding:22px}
+.safe svg{width:120px;height:auto;justify-self:center;background:var(--card);border-radius:12px;padding:8px}
+.safe .big{font-family:'El Messiri',serif;font-size:clamp(28px,6vw,42px);line-height:1.25;color:#fff;margin:0}
+.safe p{margin:8px 0 0;font-size:16px}
+.safe ul{margin:14px 0 0;padding:0 18px 0 0;font-size:15.5px}
+.safe li{margin-bottom:6px}
+.rx .src{color:var(--muted)}
+
+/* ظهر البطاقة: ٨ نوفمبر */
+.back{display:grid;gap:18px;background:var(--card);border:2px solid var(--line);outline:1px solid var(--line);outline-offset:-9px;border-radius:4px;padding:28px 22px}
+.back .years{font-family:'El Messiri',serif;font-size:clamp(40px,10vw,76px);line-height:1;margin:0;color:var(--ink);direction:ltr;text-align:right}
+.back .years span{color:var(--muted)}
+.back p{margin:10px 0 0;font-size:16.5px}
+.back figure{margin:0;justify-self:center;width:min(220px,70%)}
+.back figure svg{display:block;width:100%;height:auto;background:var(--film);border:8px solid var(--sheet)}
+.back figcaption{font-size:13px;color:var(--muted);text-align:center;margin-top:6px}
+
+.rx footer{color:var(--muted);margin-top:56px;padding-bottom:30px}
+.rx .org .bar{background:var(--line)}
+.rx .org b{color:var(--ink)}.rx .org span{color:var(--ink)}.rx .org em{color:var(--muted)}
+.rx .home{display:flex;justify-content:center;margin:18px 0}
+.rx .home a{display:inline-flex;align-items:center;gap:8px;background:var(--ink);color:#fff;text-decoration:none;font-weight:600;padding:12px 22px;border-radius:10px;min-height:48px;transition:transform .16s var(--ease)}
+.rx .home a:active{transform:scale(.97)}
+
+/* دخول الشخصيات مرة واحدة */
+.parade svg{animation:rx-up .5s var(--ease) both}
+.parade svg:nth-child(2){animation-delay:.06s}.parade svg:nth-child(3){animation-delay:.12s}.parade svg:nth-child(4){animation-delay:.18s}.parade svg:nth-child(5){animation-delay:.24s}
+@keyframes rx-up{from{opacity:0;transform:translateY(14px)}}
+
+@media (min-width:760px){
+ .post{padding:44px 48px 34px}
+ .stamp{width:78px;height:96px}
+ .panel{grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:28px;align-items:start}
+ .lightbox{padding:20px}
+ .cast button{font-size:14.5px}
+ .duo-rx{grid-template-columns:1fr 1fr}
+ .safe{grid-template-columns:auto 1fr;padding:30px;gap:30px}
+ .safe svg{width:150px}
+ .back{grid-template-columns:1fr auto;padding:38px 48px;align-items:center}
+}
+@media (prefers-reduced-motion:reduce){
+ .rx *,.rx *::before{animation:none!important;transition:none!important}
+}
